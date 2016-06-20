@@ -159,6 +159,8 @@ INSTALLED_APPS = (
 'django.contrib.sessions',
 'django.contrib.messages',
 'django.contrib.staticfiles',
+'user_profile',
+'tweets',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -184,12 +186,15 @@ DATABASES = {
 }
 
 #static file directory inclusion
-STATICFILES_DIRS = ( 
-os.path.join(
-os.path.dirname(__file__),
-'static',
-),
+STATICFILES_DIRS = (
+BASE_DIR + '/static/',
 )
+# STATICFILES_DIRS = ( 
+# os.path.join(
+# os.path.dirname(__file__),
+# 'static',
+# ),
+# )
 
 TEMPLATE_DIRS = (
 BASE_DIR + '/templates/',
